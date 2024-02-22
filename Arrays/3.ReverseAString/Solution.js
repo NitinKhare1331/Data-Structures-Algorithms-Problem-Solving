@@ -21,11 +21,11 @@ var reverseString = function (s) {
     while(left < right){
         temp = s[left];
         s[left] = s[right];
-        s[right] = temp
+        s[right] = temp;
         left++;
-        right--
+        right--;
     }
-    return s
+    return s;
 }
 
 var s = ["h","e","l","l","o"];
