@@ -28,6 +28,31 @@ var reverseString = function (s) {
     return s;
 }
 
+// function revStr(s){
+//     let n = s.length;
+//     let newArr = [];
+//     for(let i = n-1; i >= 0; i--){
+//         newArr.push(s[i])
+//     }
+//     return newArr
+// }
+
 var s = ["h","e","l","l","o"];
 let result = reverseString(s);
 console.log(result);
+// console.log(revStr(s));
+
+
+// function revStr(s){
+//     let i = 0;
+//     j = s.length - 1;
+//     temp = 0;
+//     while(i<j){
+//         temp = s[i];
+//         s[i] = s[j]
+//         s[j] = temp
+//         i++;
+//         j--;
+//     }
+//     return s
+// }
