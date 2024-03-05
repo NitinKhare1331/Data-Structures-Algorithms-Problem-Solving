@@ -25,19 +25,39 @@ Explanation: The sum of -1 and 0 is -1. Therefore index1 = 1, index2 = 2. We ret
 
 //https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 
-var TwoSumII = function (numbers, target){
-    for(let i = 0; i < numbers.length; i++){
+var TwoSumII = function (numbers, target) {
+    for(let i = 0; i < numbers.length; i++) {
         const current = numbers[i];
         const complement = target - current;
         const complementIndex = numbers.indexOf(complement,i+1);
-        if(complementIndex !== -1){
+        if(complementIndex !== -1) {
             return [i+1, complementIndex+1];
         }
     }
+    return []
 }
 
-var numbers = [2,7,11,15]
+function twoSum2(nums,target){
+    let i=0;
+    let j=nums.length-1;
+    while(i<j){
+        if(nums[i]+nums[j]==target){
+            return [i+1,j+1];
+        }
+        else if(nums[i]+nums[j]>target){
+            j--;
+        }
+        else{
+            i++;
+        }
+    }
+    return []
+}
+
+var numbers = [2,4,5,6,7,8,11]
 var target = 9
 
 let result = TwoSumII(numbers , target);
 console.log(result);
+
+console.log(twoSum2(numbers,target));
