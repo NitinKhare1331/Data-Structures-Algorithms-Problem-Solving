@@ -26,7 +26,7 @@ var reversedWords = function (s){
     console.log(s);// just for reference
     let resArr = [];
     let n = s.length-1;
-    for(let i = n;i >= 0; i--){
+    for(let i = n; i >= 0; i--){
         if(s[i] !== ''){
             resArr.push(s[i]);
         }
@@ -36,3 +36,4 @@ var reversedWords = function (s){
 
 const s = "a good   example";
 console.log(reversedWords(s));
+
