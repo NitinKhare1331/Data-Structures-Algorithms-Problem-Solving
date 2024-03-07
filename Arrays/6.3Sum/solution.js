@@ -28,7 +28,7 @@ Explanation: The only possible triplet sums up to 0.
 */
 
 var threeSum = function (nums){
-    nums.sort((a,b)=> a-b);
+    nums.sort((a,b)=>a-b);
     let n = nums.length;
     let resultArr = [];
     for(let i=0; i<n; i++){
@@ -47,7 +47,7 @@ var threeSum = function (nums){
                 }
                 b--;
             }
-            else if(sum<0){
+            else if(sum<0){ 
                 a++;
             }
             else{
@@ -55,10 +55,10 @@ var threeSum = function (nums){
             }
         }
         while(i<n-1 && nums[i]==nums[i+1]){
-            i++
+            i++;
         }
     }
-    return resultArr
+    return resultArr;
 }
 
 let nums = [-1,0,1,2,-1,-4];
