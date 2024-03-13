@@ -1,21 +1,11 @@
-var reverseWords = function(s) {
-    s = s.split(" ");
-    let result = [];
-    for(let i = s.length-1; i >= 0; i--){
-        if(s[i]!==""){
-            result.push(s[i]);
+function findEl(arr,x){
+    for(let i=0 ; i<arr.length; i++){
+        if(arr[i]==x){
+            return i;
         }
+        // else{
+        //     return -1;
+        // }
     }
-    return result.join(" ")
 }
-let s = "nitin     khare"
-console.log(reverseWords(s))
-
-var reverseWords = function(s) {
-    s = s.split(' ');
-    let res = [];
-    for(let i=s.length-1; i>=0; i--) {
-        if(s[i]!='') res.push(s[i]);
-    }
-    return res.join(' ');
-};
+console.log(findEl([4,1,3,0,-2,6,8,9],100));
