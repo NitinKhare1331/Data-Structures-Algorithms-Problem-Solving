@@ -38,11 +38,11 @@ var threeSum = function (nums){
             let sum = nums[i] + nums[a] + nums[b];
             if(sum == 0){
                 resultArr.push([nums[i],nums[a],nums[b]]);
-                while(a<b && nums[a]==nums[a+1]){
+                while(nums[a]==nums[a+1]){
                     a++;
                 }
                 a++;
-                while(a>b && nums[b]==nums[b-1]){
+                while(nums[b]==nums[b-1]){
                     b--;
                 }
                 b--;
@@ -54,7 +54,7 @@ var threeSum = function (nums){
                 b--;
             }
         }
-        while(i<n-1 && nums[i]==nums[i+1]){
+        while(nums[i]==nums[i+1]){
             i++;
         }
     }
