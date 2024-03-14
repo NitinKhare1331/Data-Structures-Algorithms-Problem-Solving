@@ -8,6 +8,9 @@ public class InsertionSort{
                 if(arr[j] > element){
                     arr[j+1] = arr[j];
                 }
+                else{
+                    break;
+                }
             }
             arr[j+1] = element;
         }

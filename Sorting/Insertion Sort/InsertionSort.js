@@ -7,11 +7,14 @@ function InsertionSort(arr){
             if(arr[j] > element){
                 arr[j+1] = arr[j];
             }
+            else{
+                break;
+            }
         }
         arr[j+1] = element;
     }
 }
 
-let arr = [5,4,3,2,1];
+let arr = [-1,-2,-3,-4,-5];
 InsertionSort(arr);
 console.log(arr);
