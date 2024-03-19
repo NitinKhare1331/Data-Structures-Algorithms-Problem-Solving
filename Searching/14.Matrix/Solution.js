@@ -18,28 +18,26 @@ Output: false
 */
 
 var searchMatrix = function(matrix, target) {
-    let n = matrix.length;
-    let arr = []
-    for(let i=0;i<n;i++){
-        arr = arr.concat(matrix[i])
-    }
-    console.log(arr); // for reference
-    let hi = arr.length;
+    let m = matrix.length;
+    let n = matrix[0].length;
     let lo = 0;
-    while(lo <= hi){
+    let hi = m*n-1;
+    while(lo<=hi){
         let mid = lo + Math.floor((hi-lo)/2);
-        if(arr[mid] == target){
+        let row = Math.floor(mid/n);
+        let col = Math.floor(mid%n);
+        if(matrix[row][col] == target){
             return true;
         }
-        else if(arr[mid] < target){
+        else if(matrix[row][col] < target){
             lo = mid+1;
         }
         else{
-            hi = mid-1
+            hi = mid-1;
         }
     }
-    return false;
+    return false
 };
 
 let ar = [[1,2,3],[4,5,6]];
-console.log(searchMatrix([[1,2,3,4],[5,6,7,8]],10));
+console.log(searchMatrix([[1,2,3,4],[5,6,7,8]],8));
