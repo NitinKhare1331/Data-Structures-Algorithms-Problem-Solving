@@ -16,5 +16,5 @@ function SmallerOrEqualElements(A,B){
 }
 
 let arr = [1,1,2,2,3,4,5,6];
-let x = 3;
+let x = 7;
 console.log(SmallerOrEqualElements(arr,x));
