@@ -31,7 +31,7 @@ var validAnagram = function (s,t){
             return false;
         }
         else{
-            mp[t[i]] -= 1;   //if key found then reduce frequency by 1
+            mp[t[i]] -= 1;   //if key is found then reduce frequency by 1
             if(mp[t[i]] == 0){
                 delete mp[t[i]]; // if frequncy is zero then delete the key
             }
