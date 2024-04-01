@@ -18,7 +18,15 @@ public class pair {
         return (int) f(n);
     }
     public static void main(String[] args){
-        int res = numberOfWays(4);
+        int res = numberOfWays(94);
         System.out.println(res);
     }
 }
+
+
+/*
+ *Modulo Arithmatic
+ *  (a+b)%c => (a%c + b%c)%c
+ *  (a*b)%c => (a%c * b%c)%c
+ *  (a-b)%c => (a%c - b%c+c)%c (b>a)
+ */
