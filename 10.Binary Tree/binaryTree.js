@@ -94,15 +94,15 @@ let levelOrder = function(root){
                 // of the next level
                 
                 // before we refresh our level array it has data of last level
-                result.push(levelArray);
+                result.push(levelarray);
                 
                 qu.enqueue(null); // we can use this null as a marker of end of current level
-                levelArray = new Array();
+                levelarray = new Array();
             } else {
-                result.push(levelArray);
+                result.push(levelarray);
             }
         } else {
-            levelArray.push(curr.val);
+            levelarray.push(curr.val);
             if(curr.left) {
                 qu.enqueue(curr.left);
             }
@@ -110,7 +110,6 @@ let levelOrder = function(root){
                 qu.enqueue(curr.right);
             }
         }
-        
     }
-        return result;
-}
+    return result;
+}    
