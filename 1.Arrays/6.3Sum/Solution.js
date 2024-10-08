@@ -31,18 +31,18 @@ var threeSum = function (nums){
     nums.sort((a,b)=>a-b);
     let n = nums.length;
     let resultArr = [];
-    for(let i=0; i<n; i++){
+    for(let i=0; i<n-2; i++){
         let a = i+1;
         let b = n-1;
         while(a<b){
             let sum = nums[i] + nums[a] + nums[b];
             if(sum == 0){
                 resultArr.push([nums[i],nums[a],nums[b]]);
-                while(nums[a]==nums[a+1]){
+                while(a<b && nums[a]==nums[a+1]){
                     a++;
                 }
                 a++;
-                while(nums[b]==nums[b-1]){
+                while(a<b && nums[b]==nums[b-1]){
                     b--;
                 }
                 b--;
