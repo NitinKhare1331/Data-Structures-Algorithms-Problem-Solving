@@ -56,8 +56,8 @@ var fourSum = function(nums,target){
     return resultArr;
 }
 
-let nums = [1,0,-1,0,-2,2]
-let target = 0
+let nums = [-3,-1,0,2,4,5]
+let target = 2
 let result = fourSum(nums,target);
 console.log(result);
 console.log('****');
